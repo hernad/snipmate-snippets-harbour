@@ -51,7 +51,9 @@ syn keyword clipperStatement	DBSORTITEM DBTRANSINFO DBTRANSITEM WORKAREA
 syn keyword clipperStatement	ALERT
 syn keyword clipperStatement	RECOVER USING END
 syn keyword clipperStatement	ProcLine ProcName Break
-syn keyword clipperStatement	CLASS ENDCLASS DATA CLASSDATA INIT
+
+" class
+syn keyword clipperStatement	PROTECTED: PRIVATE: CLASS ENDCLASS DATA CLASSDATA INIT
 
 " Conditionals
 syn keyword clipperConditional	CASE OTHERWISE ENDCASE

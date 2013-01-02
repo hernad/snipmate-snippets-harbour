@@ -31,37 +31,37 @@ snippet case
 	end case
 snippet inc_hbclass
 	#include "hbclass.ch"
-snippet cls_create
+snippet class_create
 	CLASS ${1:Class}  INHERIT  ${2:Parent1}, ${3:Parrent2}
 
-	    DATA     ${4:Data1}  INIT ${5:InitData1}
-	    CLASSDATA ${6:class_private_data}
+	    DATA       ${4:Data1}  INIT ${5:InitData1}
+	    CLASSDATA  ${6:class_private_data}
 
-	    METHOD   New(${7:params})
-	    METHOD   Destroy()
-	    METHOD   ${8:method}(${9:m_params})
-	    METHOD   ${10:inline_method}(${11:inline_params})   INLINE ${12:{|| return .t.}}
+	    METHOD     New(${7:params})
+	    METHOD     Destroy()
+	    METHOD     ${8:method}(${9:m_params})
+	    METHOD     ${10:inline_method}(${11:inline_params})   INLINE ${12:{|| return .t.}}
 
 	  PROTECTED:
-	    METHOD   ${13:protected_method}(${14:protected_method_params})
+	    METHOD     ${13:protected_method}(${14:protected_method_params})
 	ENDCLASS
-snippet cls_new_method
+snippet class_new_method
 	METHOD ${1:Class}:New(${2:method_params})
 		${4://new code}
 	return SELF
-snippet cls_method
+snippet class_method
 	METHOD ${1:Class}:${2:method_name}(${3:method_params})
 		${4://code}
 	return ${3:retval}
-snippet cls_access_method
+snippet class_access_method
 	ACCESS ${1:access_assign_name}   INLINE ::${2:instance_var}
-snippet cls_assign_method
+snippet class_assign_method
 	ASSIGN ${1:access_assign_name}(${2:value})   INLINE ::${3:instance_var} := ${2:value}
-snippet cls_self
+snippet class_self
 	SELF
-snippet cls_this
+snippet class_this
 	SELF
-snippet cls_instance
+snippet class_instance
 	::${1:instance_var}
-snippet isnumeric
+snippet isnum
 	hb_isNumeric(${1:var})
