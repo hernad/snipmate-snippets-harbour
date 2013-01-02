@@ -53,7 +53,7 @@ syn keyword clipperStatement	RECOVER USING END
 syn keyword clipperStatement	ProcLine ProcName Break
 
 " class
-syn keyword clipperStatement	PROTECTED PRIVATE CLASS ENDCLASS DATA CLASSDATA METHOD INIT
+syn keyword clipperStatement	PROTECTED PRIVATE CLASS ENDCLASS DATA CLASSDATA METHOD INLINE ACCESS ASSIGN INIT
 
 " Conditionals
 syn keyword clipperConditional	CASE OTHERWISE ENDCASE
