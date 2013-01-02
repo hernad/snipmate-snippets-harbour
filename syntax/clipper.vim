@@ -13,8 +13,8 @@ endif
 " If you don't like this, comment it
 "syn match  clipperUserVariable	"\<[a,b,c,d,l,n,o,u,x][A-Z][A-Za-z0-9_]*\>"
 syn match  clipperUserVariable	"\<_[a-z][A-Za-z0-9_]*\>"
-syn match  clipperUserVariable	"\<[a-z][A-Za-z0-9_]*\>"
-syn match  clipperUserVariable	"\<[A-Z][a-z]+[A-Za-z0-9_]*\>"
+"syn match  clipperUserVariable	"\<[a-z][A-Za-z0-9_]*\>"
+syn match  clipperUserVariable	"\<[A-Z][a-z]+[A-Za-z0-9_]*[a-z]\>"
 "syn match  clipperUserVariable	"\<[a-z]\>"
 "syn match  clipperUserVariable	"\<[a-z][a-z_]+\>"
 syn match  clipperUserVariable  "SELF"
