@@ -14,7 +14,7 @@ endif
 syn match  clipperUserVariable	"\<[a,b,c,d,l,n,o,u,x][A-Z][A-Za-z0-9_]*\>"
 syn match  clipperUserVariable	"\<_[a-z][A-Za-z0-9_]*\>"
 syn match  clipperUserVariable	"\<[a-z]\>"
-syn match  clipperUserVariable	"\<[a-z_]+\>"
+syn match  clipperUserVariable	"\<[a-z][a-z_]+\>"
 syn match  clipperUserVariable  "SELF"
 
 " Clipper is case insensitive ( see "exception" above )
