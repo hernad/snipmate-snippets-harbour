@@ -14,6 +14,8 @@ endif
 syn match  clipperUserVariable	"\<[a,b,c,d,l,n,o,u,x][A-Z][A-Za-z0-9_]*\>"
 syn match  clipperUserVariable	"\<_[a-z][A-Za-z0-9_]*\>"
 syn match  clipperUserVariable	"\<[a-z]\>"
+syn match  clipperUserVariable	"\<[a-z_]+\>"
+syn match  clipperUserVariable  "SELF"
 
 " Clipper is case insensitive ( see "exception" above )
 syn case ignore
@@ -49,6 +51,7 @@ syn keyword clipperStatement	DBSORTITEM DBTRANSINFO DBTRANSITEM WORKAREA
 syn keyword clipperStatement	ALERT
 syn keyword clipperStatement	RECOVER USING END
 syn keyword clipperStatement	ProcLine ProcName Break
+syn keyword clipperStatement	CLASS ENDCLASS DATA CLASSDATA INIT
 
 " Conditionals
 syn keyword clipperConditional	CASE OTHERWISE ENDCASE

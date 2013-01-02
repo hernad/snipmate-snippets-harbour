@@ -12,20 +12,54 @@ snippet trycatch
 	    ${1:// code}
 	recover using _err
 
-	    _msg := "ERR: " + _err:description + "${2: opis greske}"
-	    ALERT(_msg)
-	    log_write(_msg, ${3: loglevel})
+	    _msg := "ERR: " + _err:description + "${2:opis greske}"
+	    ${3:ALERT(_msg)}
+	    log_write(_msg, ${4:loglevel})
 
-	    //RaiseError(_msg)
-	    //QUIT_1
+	    ${5://RaiseError(_msg)}
+	    ${6://QUIT_1}
 
 	end sequence
 snippet case
 	do case	
-	    case (${1:con1 eg. _char==K_ENTER})
-	        ${2://code1}
-		case (${3:condition2 eg. _char==K_ESC})
-	        ${4://code2}
+	    case (${1:_char==K_ENTER})
+	        ${2://code if char K_ENTER}
+		case (${3:_char==K_ESC})
+	        ${4://code if char K_ESC}
 	    otherwise
-	        ${5://otherwisecode}
+	        ${5://otherwise code}
 	end case
+snippet cls_create
+	CLASS ${1:Class}  INHERIT  ${2:Parent1}, ${3:Parrent2}
+
+	    DATA     ${4:Data1}  INIT ${5:InitData1}
+	    CLASSDATA ${6:class_private_data}
+
+	    METHOD   New(${7:params})
+	    METHOD   Destroy()
+	    METHOD   ${8:method}(${9:m_params})
+	    METHOD   ${10:inline_method}(${11:inline_params})   INLINE ${12:{|| return .t.}}
+
+	  PROTECTED:
+	    METHOD   ${13:protected_method}(${14:protected_method_params})
+	ENDCLASS
+snippet cls_new_method
+	METHOD ${1:Class}:New(${2:method_params})
+		${4://new code}
+	return SELF
+snippet cls_method
+	METHOD ${1:Class}:${2:method_name}(${3:method_params})
+		${4://code}
+	return ${3:retval}
+snippet cls_access_method
+	ACCESS ${1:access_assign_name}   INLINE ::${2:instance_var}
+snippet cls_assign_method
+	ASSIGN ${1:access_assign_name}(${2:value})   INLINE ::${3:instance_var} := ${2:value}
+snippet cls_self
+	SELF
+snippet cls_this
+	SELF
+snippet cls_instance
+	::${1:instance_var}
+snippet isnumeric
+	hb_isNumeric(${1:var})
