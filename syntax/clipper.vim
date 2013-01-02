@@ -47,7 +47,8 @@ syn keyword clipperStatement	DBOPENINFO DBORDERCONDINFO DBORDERCREATEINF
 syn keyword clipperStatement	DBORDERINFO DBRELINFO DBSCOPEINFO DBSORTINFO
 syn keyword clipperStatement	DBSORTITEM DBTRANSINFO DBTRANSITEM WORKAREA
 syn keyword clipperStatement	ALERT
-syn keyword clipperStatement	END
+syn keyword clipperStatement	RECOVER USING END
+syn keyword clipperStatement	ProcLine ProcName Break
 
 " Conditionals
 syn keyword clipperConditional	CASE OTHERWISE ENDCASE

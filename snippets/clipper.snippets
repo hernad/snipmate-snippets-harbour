@@ -20,3 +20,12 @@ snippet trycatch
 	    //QUIT_1
 
 	end sequence
+snippet case
+	do case	
+	    case (${1:con1 eg. _char==K_ENTER})
+	        ${2://code1}
+		case (${3:condition2 eg. _char==K_ESC})
+	        ${4://code2}
+	    otherwise
+	        ${5://otherwisecode}
+	end case
