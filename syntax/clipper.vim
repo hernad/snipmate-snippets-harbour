@@ -14,7 +14,7 @@ endif
 "syn match  clipperUserVariable	"\<[a,b,c,d,l,n,o,u,x][A-Z][A-Za-z0-9_]*\>"
 syn match  clipperUserVariable	"\<_[a-z][A-Za-z0-9_]*\>"
 syn match  clipperUserVariable	"\<[a-z][A-Za-z0-9_]*\>"
-syn match  clipperUserVariable	"\<[A-Z]+[a-z]+[A-Za-z0-9_]*\>"
+syn match  clipperUserVariable	"\<[A-Z][a-z]+[A-Za-z0-9_]*\>"
 "syn match  clipperUserVariable	"\<[a-z]\>"
 "syn match  clipperUserVariable	"\<[a-z][a-z_]+\>"
 syn match  clipperUserVariable  "SELF"
@@ -55,7 +55,7 @@ syn keyword clipperStatement	RECOVER USING END
 syn keyword clipperStatement	ProcLine ProcName Break
 
 " class
-syn keyword clipperStatement	PROTECTED PRIVATE CLASS ENDCLASS DATA CLASSDATA METHOD INLINE ACCESS ASSIGN INHERIT DEFAULT INIT
+syn keyword clipperStatement	DESTROY PROTECTED PRIVATE CLASS ENDCLASS DATA CLASSDATA METHOD INLINE ACCESS ASSIGN INHERIT DEFAULT INIT
 
 " Conditionals
 syn keyword clipperConditional	CASE OTHERWISE ENDCASE
