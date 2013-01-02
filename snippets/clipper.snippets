@@ -7,3 +7,16 @@ snippet while
 	do while ${1:condition}
 	   ${2:// code}
 	enddo
+snippet trycatch
+	begin sequence with { |err| err:cargo := { ProcName(1), ProcName(2), ProcLine(1), ProcLine(2) }, Break(err) }
+	    ${1:// code}
+	recover using _err
+
+	    _msg := "ERR: " + _err:description + "${2: opis greske}"
+	    ALERT(_msg)
+	    log_write(_msg, ${3: loglevel})
+
+	    //RaiseError(_msg)
+	    //QUIT_1
+
+	end sequence
