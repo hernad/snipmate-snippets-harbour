@@ -63,5 +63,11 @@ snippet class_this
 	SELF
 snippet class_instance
 	::${1:instance_var}
+snippet func
+	function ${1:func_name}(${2:params})
+	${3://code}
+	return ${4:ret_value}
+snippet default_value
+	DEFAULT ${1:var} TO ${2:value}
 snippet isnum
 	hb_isNumeric(${1:var})
