@@ -71,3 +71,24 @@ snippet default_value
 	DEFAULT ${1:var} TO ${2:value}
 snippet isnum
 	hb_isNumeric(${1:var})
+snippet fore
+	FOR EACH _item IN ${1:array}
+		${2://code}
+	NEXT
+snippet fore_param
+	FOR EACH _item IN hb_AParams()
+	    ${2:if _item == "--test" ...}
+	NEXT
+snippet f18_license
+	/* 
+	 * This file is part of the bring.out FMK, a free and open source 
+	 * accounting software suite,
+	 * Copyright (c) 1994-2011 by bring.out d.o.o Sarajevo.
+	 * It is licensed to you under the Common Public Attribution License
+	 * version 1.0, the full text of which (including knowhow ERP specific Exhibits)
+	 * is available in the file LICENSE_CPAL_bring.out_knowhow.md located at the 
+	 * root directory of this source code archive.
+	 * By using this software, you agree to be bound by its terms.
+	 */
+
+
