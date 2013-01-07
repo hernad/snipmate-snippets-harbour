@@ -99,3 +99,13 @@ snippet f18_if_not_file
 	_alias := ${1:"XX" //na vrhu inc_cre_all}
 	_table_name := ${2:"xx"}
 	IF_NOT_FILE_DBF_CREATE
+snippet modstru
+
+	// 0.${1:MAJOR}.${2:MINOR}
+	if ver["current"] > 00000 .and. ver["current"] < 0${1}${2}
+	 for each _tbl in { ${3:"fakt_doks"}, ${4:"fakt_fakt"}, ${5:"fakt_pripr"} }
+	    modstru({"*" + _tbl, ; 
+	        ${6:"C BRDOK C 8 0 BRDOK C 12 0"}  ;
+	    })
+	 next
+	endif
