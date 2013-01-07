@@ -31,6 +31,9 @@ snippet case
 	end case
 snippet inc_hbclass
 	#include "hbclass.ch"
+	#include "common.ch"
+snippet inc_cre_all
+	#include "cre_all.ch"
 snippet class_create
 	CLASS ${1:Class}  INHERIT  ${2:Parent1}, ${3:Parrent2}
 
@@ -91,3 +94,8 @@ snippet f18_license
 	 * By using this software, you agree to be bound by its terms.
 	 */
 	
+snippet f18_if_not_file
+	// inc_cre_all
+	_alias := ${1:"XX" //na vrhu inc_cre_all}
+	_table_name := ${2:"xx"}
+	IF_NOT_FILE_DBF_CREATE
