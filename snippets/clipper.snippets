@@ -95,14 +95,15 @@ snippet f18_license
 	 */
 	
 snippet f18_if_not_file
-	// inc_cre_all
-	_alias := ${1:"XX" //na vrhu inc_cre_all}
+	// predhodi: inc_cre_all
+	// predhodi: AADD(aDbf, ... }
+	_alias := ${1:"XX"}
 	_table_name := ${2:"xx"}
 	IF_NOT_FILE_DBF_CREATE
-snippet modstru
-
-	// 0.${1:MAJOR}.${2:MINOR}
-	if ver["current"] > 00000 .and. ver["current"] < 0${1}${2}
+	// slijedi (ako treba): modstru_dbf
+snippet modstru_dbf
+	// 0.${1:09-MAJOR}.${2:01-MINOR}
+	if ver["current"] > 00000 .and. ver["current"] < 0${1:09-MAJOR}${2:01-MINOR}
 	 for each _tbl in { ${3:"fakt_doks"}, ${4:"fakt_fakt"}, ${5:"fakt_pripr"} }
 	    modstru({"*" + _tbl, ; 
 	        ${6:"C BRDOK C 8 0 BRDOK C 12 0"}  ;
