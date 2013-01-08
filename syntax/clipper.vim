@@ -59,8 +59,8 @@ syn keyword clipperStatement	ProcLine ProcName Break
 syn keyword clipperStatement	DESTROY PROTECTED PRIVATE CLASS ENDCLASS DATA CLASSDATA METHOD INLINE ACCESS ASSIGN INHERIT DEFAULT INIT
 
 " Conditionals
-syn keyword clipperConditional	CASE OTHERWISE ENDCASE
-syn keyword clipperConditional	IF ELSE ENDIF IIF IFDEF IFNDEF
+syn keyword clipperConditional	SWITCH CASE OTHERWISE ENDCASE
+syn keyword clipperConditional	IF ELSE ELSEIF ENDIF IIF IFDEF IFNDEF
 
 " Loops
 syn keyword clipperRepeat	DO WHILE ENDDO

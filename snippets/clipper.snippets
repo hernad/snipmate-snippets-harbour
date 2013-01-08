@@ -102,8 +102,8 @@ snippet f18_if_not_file
 	IF_NOT_FILE_DBF_CREATE
 	// slijedi (ako treba): modstru_dbf
 snippet modstru_dbf
-	// 0.${1:09-MAJOR}.${2:01-MINOR}
-	if ver["current"] > 00000 .and. ver["current"] < 0${1:09-MAJOR}${2:01-MINOR}
+	// 0.09.01 - 09-MAJOR, 01-MINOR
+	if ver["current"] > 00000 .and. ver["current"] < 0${1:09}${2:01}
 	 for each _tbl in { ${3:"fakt_doks"}, ${4:"fakt_fakt"}, ${5:"fakt_pripr"} }
 	    modstru({"*" + _tbl, ; 
 	        ${6:"C BRDOK C 8 0 BRDOK C 12 0"}  ;
