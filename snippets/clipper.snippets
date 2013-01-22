@@ -101,6 +101,8 @@ snippet f18_if_not_file
 	_table_name := ${2:"xx"}
 	IF_NOT_FILE_DBF_CREATE
 	// slijedi (ako treba): modstru_dbf
+	IF_C_RESET_SEMAPHORE
+	// kreiraj indekse
 snippet modstru_dbf
 	// 0.09.01 - 09-MAJOR, 01-MINOR
 	if ver["current"] > 00000 .and. ver["current"] < 0${1:09}${2:01}
